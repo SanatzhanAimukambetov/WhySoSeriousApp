@@ -14,15 +14,13 @@ class JokeViewModel {
     
     func fetchJokesData(completion: @escaping () -> ()) {
         
-        // weak self - prevent retain cycles
-        apiService.getJokeData{ [weak self] (result) in
-            
+        apiService.getJokeData(router: .getTenJokes) { [weak self] (result) in
+
             switch result {
             case .success(let listOf):
                 self?.tenJokes = listOf
                 completion()
             case .failure(let error):
-                // Something is wrong with the JSON file or the model
                 print("Error processing json data: \(error)")
             }
         }

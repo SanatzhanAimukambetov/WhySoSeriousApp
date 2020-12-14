@@ -19,6 +19,7 @@
 		8990A5DD25879EDA00CF1F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */; };
 		8990A5E72587A2D500CF1F90 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5E62587A2D500CF1F90 /* MenuViewController.swift */; };
 		8990A5EA2587A2ED00CF1F90 /* RandomJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */; };
+		89CFF04C2587FD0400C35CED /* RandomJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CFF04B2587FD0400C35CED /* RandomJokeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8990A5DE25879EDA00CF1F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8990A5E62587A2D500CF1F90 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewController.swift; sourceTree = "<group>"; };
+		89CFF04B2587FD0400C35CED /* RandomJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 		8957133B2587F202007A3064 /* RandomJoke */ = {
 			isa = PBXGroup;
 			children = (
-				8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */,
+				89CFF04A2587FC6B00C35CED /* View */,
+				89CFF04E2587FD4600C35CED /* ViewModel */,
 			);
 			path = RandomJoke;
 			sourceTree = "<group>";
@@ -68,8 +71,8 @@
 		8957133C2587F26B007A3064 /* Jokes */ = {
 			isa = PBXGroup;
 			children = (
-				8990A5D425879ED500CF1F90 /* JokesViewController.swift */,
-				895713282587A7B0007A3064 /* JokeTableViewCell.swift */,
+				89CFF0482587FC5500C35CED /* View */,
+				89CFF0492587FC5D00C35CED /* ViewModel */,
 			);
 			path = Jokes;
 			sourceTree = "<group>";
@@ -96,17 +99,57 @@
 				8990A5D025879ED500CF1F90 /* AppDelegate.swift */,
 				8990A5D225879ED500CF1F90 /* SceneDelegate.swift */,
 				8957132F2587AB9F007A3064 /* ApiService.swift */,
+				89CFF0452587FC0C00C35CED /* Model */,
 				8957133C2587F26B007A3064 /* Jokes */,
 				8957133B2587F202007A3064 /* RandomJoke */,
 				8957133A2587F1BA007A3064 /* Menu */,
-				8957132C2587A986007A3064 /* JokeModel.swift */,
-				895713372587CC45007A3064 /* JokeViewModel.swift */,
 				8990A5D625879ED500CF1F90 /* Main.storyboard */,
 				8990A5D925879EDA00CF1F90 /* Assets.xcassets */,
 				8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */,
 				8990A5DE25879EDA00CF1F90 /* Info.plist */,
 			);
 			path = WhySoSeriousApp;
+			sourceTree = "<group>";
+		};
+		89CFF0452587FC0C00C35CED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8957132C2587A986007A3064 /* JokeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89CFF0482587FC5500C35CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5D425879ED500CF1F90 /* JokesViewController.swift */,
+				895713282587A7B0007A3064 /* JokeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89CFF0492587FC5D00C35CED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				895713372587CC45007A3064 /* JokeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		89CFF04A2587FC6B00C35CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89CFF04E2587FD4600C35CED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				89CFF04B2587FD0400C35CED /* RandomJokeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +230,7 @@
 				8990A5D325879ED500CF1F90 /* SceneDelegate.swift in Sources */,
 				8990A5E72587A2D500CF1F90 /* MenuViewController.swift in Sources */,
 				895713302587AB9F007A3064 /* ApiService.swift in Sources */,
+				89CFF04C2587FD0400C35CED /* RandomJokeViewModel.swift in Sources */,
 				8990A5EA2587A2ED00CF1F90 /* RandomJokeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

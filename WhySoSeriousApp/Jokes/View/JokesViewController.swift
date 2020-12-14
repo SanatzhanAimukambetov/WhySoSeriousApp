@@ -16,14 +16,20 @@ class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        loadData()
+    }
+    
+    private func loadData() {
         viewModel.fetchJokesData { [weak self] in
-            self?.tableView.delegate = self
-            self?.tableView.dataSource = self
             self?.tableView.reloadData()
         }
-        
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.separatorStyle = .none
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +41,6 @@ class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let joke = viewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(joke)
-        
         
         return cell
     }

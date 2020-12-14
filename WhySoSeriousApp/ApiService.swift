@@ -8,20 +8,33 @@
 import Foundation
 
 class ApiService {
+
+    enum Router {
+        case getRandomJoke
+        case getTenJokes
+        
+        private var baseURL: String {
+            return "https://official-joke-api.appspot.com/jokes/ten"
+        }
+        
+        private var path: String {
+            switch self {
+            case .getRandomJoke: return "/random"
+            case .getTenJokes: return "/ten"
+            }
+        }
+        
+        var url: String {
+            return baseURL + path
+        }
+    }
     
     private var dataTask: URLSessionDataTask?
     var oneJoke = [Joke]()
     
-    private enum router {
-        case getRandomJoke
-        case getTenJokes
-    }
-    
-    func getJokeData(completion: @escaping (Result<[Joke], NetworkError>) -> Void) {
+    func getJokeData(router: Router, completion: @escaping (Result<[Joke], NetworkError>) -> Void) {
         
-        let randomJokeURL = "https://official-joke-api.appspot.com/jokes/ten"
-        
-        guard let url = URL(string: randomJokeURL) else {
+        guard let url = URL(string: router.url) else {
             completion(.failure(.URLError))
             return
         }
@@ -30,7 +43,6 @@ class ApiService {
             
             if let error = error {
                 completion(.failure(.internetError))
-                print(error)
                 return
             }
             
