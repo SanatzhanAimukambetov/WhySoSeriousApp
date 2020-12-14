@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		895713292587A7B0007A3064 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895713282587A7B0007A3064 /* JokeTableViewCell.swift */; };
+		8957132D2587A986007A3064 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8957132C2587A986007A3064 /* JokeModel.swift */; };
+		895713302587AB9F007A3064 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8957132F2587AB9F007A3064 /* ApiService.swift */; };
+		895713382587CC45007A3064 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895713372587CC45007A3064 /* JokeViewModel.swift */; };
 		8990A5D125879ED500CF1F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D025879ED500CF1F90 /* AppDelegate.swift */; };
 		8990A5D325879ED500CF1F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D225879ED500CF1F90 /* SceneDelegate.swift */; };
-		8990A5D525879ED500CF1F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D425879ED500CF1F90 /* ViewController.swift */; };
+		8990A5D525879ED500CF1F90 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D425879ED500CF1F90 /* JokesViewController.swift */; };
 		8990A5D825879ED500CF1F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8990A5D625879ED500CF1F90 /* Main.storyboard */; };
 		8990A5DA25879EDA00CF1F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8990A5D925879EDA00CF1F90 /* Assets.xcassets */; };
 		8990A5DD25879EDA00CF1F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */; };
+		8990A5E72587A2D500CF1F90 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5E62587A2D500CF1F90 /* MenuViewController.swift */; };
+		8990A5EA2587A2ED00CF1F90 /* RandomJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		895713282587A7B0007A3064 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		8957132C2587A986007A3064 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		8957132F2587AB9F007A3064 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		895713372587CC45007A3064 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		8990A5CD25879ED500CF1F90 /* WhySoSeriousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhySoSeriousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990A5D025879ED500CF1F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8990A5D225879ED500CF1F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8990A5D425879ED500CF1F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8990A5D425879ED500CF1F90 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		8990A5D725879ED500CF1F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8990A5D925879EDA00CF1F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8990A5DC25879EDA00CF1F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8990A5DE25879EDA00CF1F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8990A5E62587A2D500CF1F90 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +70,13 @@
 			children = (
 				8990A5D025879ED500CF1F90 /* AppDelegate.swift */,
 				8990A5D225879ED500CF1F90 /* SceneDelegate.swift */,
-				8990A5D425879ED500CF1F90 /* ViewController.swift */,
+				8957132F2587AB9F007A3064 /* ApiService.swift */,
+				8990A5E62587A2D500CF1F90 /* MenuViewController.swift */,
+				8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */,
+				8990A5D425879ED500CF1F90 /* JokesViewController.swift */,
+				895713282587A7B0007A3064 /* JokeTableViewCell.swift */,
+				8957132C2587A986007A3064 /* JokeModel.swift */,
+				895713372587CC45007A3064 /* JokeViewModel.swift */,
 				8990A5D625879ED500CF1F90 /* Main.storyboard */,
 				8990A5D925879EDA00CF1F90 /* Assets.xcassets */,
 				8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */,
@@ -137,9 +155,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8990A5D525879ED500CF1F90 /* ViewController.swift in Sources */,
+				8957132D2587A986007A3064 /* JokeModel.swift in Sources */,
+				895713382587CC45007A3064 /* JokeViewModel.swift in Sources */,
+				8990A5D525879ED500CF1F90 /* JokesViewController.swift in Sources */,
 				8990A5D125879ED500CF1F90 /* AppDelegate.swift in Sources */,
+				895713292587A7B0007A3064 /* JokeTableViewCell.swift in Sources */,
 				8990A5D325879ED500CF1F90 /* SceneDelegate.swift in Sources */,
+				8990A5E72587A2D500CF1F90 /* MenuViewController.swift in Sources */,
+				895713302587AB9F007A3064 /* ApiService.swift in Sources */,
+				8990A5EA2587A2ED00CF1F90 /* RandomJokeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
