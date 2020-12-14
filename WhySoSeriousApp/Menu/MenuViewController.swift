@@ -8,11 +8,18 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
+    
+    @IBOutlet var mainImage: UIImageView!
+    
+    @IBOutlet var buttonToTable: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    
 
 }

@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct JokesData: Decodable {
-    
-    var jokes: [Joke]
-    
-}
-
 struct Joke: Decodable {
     
     var id: Int?

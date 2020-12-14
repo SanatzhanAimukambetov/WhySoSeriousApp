@@ -49,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8957133A2587F1BA007A3064 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5E62587A2D500CF1F90 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8957133B2587F202007A3064 /* RandomJoke */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */,
+			);
+			path = RandomJoke;
+			sourceTree = "<group>";
+		};
+		8957133C2587F26B007A3064 /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5D425879ED500CF1F90 /* JokesViewController.swift */,
+				895713282587A7B0007A3064 /* JokeTableViewCell.swift */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
 		8990A5C425879ED500CF1F90 = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +96,9 @@
 				8990A5D025879ED500CF1F90 /* AppDelegate.swift */,
 				8990A5D225879ED500CF1F90 /* SceneDelegate.swift */,
 				8957132F2587AB9F007A3064 /* ApiService.swift */,
-				8990A5E62587A2D500CF1F90 /* MenuViewController.swift */,
-				8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */,
-				8990A5D425879ED500CF1F90 /* JokesViewController.swift */,
-				895713282587A7B0007A3064 /* JokeTableViewCell.swift */,
+				8957133C2587F26B007A3064 /* Jokes */,
+				8957133B2587F202007A3064 /* RandomJoke */,
+				8957133A2587F1BA007A3064 /* Menu */,
 				8957132C2587A986007A3064 /* JokeModel.swift */,
 				895713372587CC45007A3064 /* JokeViewModel.swift */,
 				8990A5D625879ED500CF1F90 /* Main.storyboard */,

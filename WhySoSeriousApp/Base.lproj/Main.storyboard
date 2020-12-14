@@ -52,6 +52,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SFJ-aS-KH1"/>
+                    <connections>
+                        <outlet property="buttonToTable" destination="1g6-tm-WbJ" id="Kah-9h-Ymj"/>
+                        <outlet property="mainImage" destination="V2j-sS-e1w" id="3n9-ox-HeS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRN-QQ-4jP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +75,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-XF-RpA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="45" placeholderIntrinsicHeight="21" text="Setup" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-XF-RpA">
                                 <rect key="frame" x="184.5" y="344" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -119,7 +123,13 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-MP-R4L">
                                                     <rect key="frame" x="10" y="5" width="394" height="110"/>
-                                                    <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.25098039215686274" green="0.58039215686274503" blue="0.29803921568627451" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-If-ShZ">
                                                     <rect key="frame" x="20" y="37" width="374" height="21"/>
@@ -146,6 +156,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.96078431372549022" green="0.792156862745098" blue="0.23529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="U2X-MP-R4L" firstAttribute="top" secondItem="fiP-U9-I2l" secondAttribute="top" constant="5" id="0Up-Kb-duG"/>
                                                 <constraint firstItem="nte-t5-1Gx" firstAttribute="top" secondItem="fiP-U9-I2l" secondAttribute="topMargin" id="17c-6t-oEu"/>
@@ -165,12 +176,6 @@
                                                 <constraint firstItem="nte-t5-1Gx" firstAttribute="leading" secondItem="fiP-U9-I2l" secondAttribute="leadingMargin" id="wo2-Uk-U2n"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="bgView" destination="U2X-MP-R4L" id="Z9X-Er-OIa"/>
                                             <outlet property="idLabel" destination="nte-t5-1Gx" id="nLO-nh-yYm"/>
