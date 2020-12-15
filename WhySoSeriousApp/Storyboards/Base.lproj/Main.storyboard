@@ -32,7 +32,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="k1f-XJ-HU6" kind="presentation" identifier="randomJoke" id="pqy-XK-Xz8"/>
+                                    <segue destination="ipt-gu-BHe" kind="presentation" id="WIa-h6-yVq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-tm-WbJ">
@@ -119,7 +119,14 @@
                             <constraint firstItem="GAi-Yx-HCK" firstAttribute="leading" secondItem="ZJS-ne-wtE" secondAttribute="leading" constant="10" id="KZR-9B-vHl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="g09-SZ-BaX"/>
+                    <navigationItem key="navigationItem" id="g09-SZ-BaX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="MUn-fx-6fs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="dismissVC:" destination="k1f-XJ-HU6" id="U0o-De-i2R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="jokeLabel" destination="QKv-Yv-TB4" id="pIA-MC-hVq"/>
                         <outlet property="setupLabel" destination="nkt-XF-RpA" id="pud-AE-DNz"/>
@@ -127,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oW0-w5-DEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168" y="-204"/>
+            <point key="canvasLocation" x="742.02898550724649" y="-204.24107142857142"/>
         </scene>
         <!--Jokes View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -235,20 +242,40 @@
         <!--Navigation Controller-->
         <scene sceneID="WjD-Q6-cfo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFe-1r-XuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R52-mg-3jg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y14-uO-yA2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35686274509803922" green="0.20784313725490194" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="cET-uL-AW3" kind="relationship" relationship="rootViewController" id="6Xz-Y4-z2T"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uFe-1r-XuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2068.1159420289855" y="64.955357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vsd-rL-egh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ipt-gu-BHe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wIi-iq-Qsn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35686274509803922" green="0.20784313725490194" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k1f-XJ-HU6" kind="relationship" relationship="rootViewController" id="7uW-hJ-fTf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coJ-Jw-paT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168.11594202898553" y="-204.24107142857142"/>
         </scene>
     </scenes>
     <resources>

@@ -35,7 +35,12 @@ class RandomJokeViewController: UIViewController {
     }
     
     private func setupLabels() {
-        setupLabel.lineBreakMode = .byCharWrapping
-        jokeLabel.lineBreakMode = .byCharWrapping
+        setupLabel.lineBreakMode = .byWordWrapping
+        jokeLabel.lineBreakMode = .byWordWrapping
+    }
+    
+    
+    @IBAction func dismissVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
