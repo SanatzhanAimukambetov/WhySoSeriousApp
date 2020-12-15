@@ -13,10 +13,10 @@ class RandomJokeViewModel {
     
     func fetchJokesData(completion: @escaping (Joke?) -> ()) {
         
-        apiService.getJokeData(router: .getRandomJoke) { result in
+        apiService.getJokeData(router: .getRandomJoke, type: Joke.self) { result in
             switch result {
-            case .success(let jokes):
-                completion(jokes.first)
+            case .success(let joke):
+                completion(joke)
             case .failure(let error):
                 print("Error processing json data: \(error)")
             }

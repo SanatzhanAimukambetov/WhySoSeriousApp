@@ -35,9 +35,7 @@ class RandomJokeViewController: UIViewController {
     }
     
     private func setupLabels() {
-        setupLabel.isHidden = true
         setupLabel.lineBreakMode = .byCharWrapping
-        jokeLabel.isHidden = true
         jokeLabel.lineBreakMode = .byCharWrapping
     }
 }

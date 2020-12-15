@@ -14,7 +14,7 @@ class ApiService {
         case getTenJokes
         
         private var baseURL: String {
-            return "https://official-joke-api.appspot.com/jokes/ten"
+            return "https://official-joke-api.appspot.com/jokes"
         }
         
         private var path: String {
@@ -32,7 +32,7 @@ class ApiService {
     private var dataTask: URLSessionDataTask?
     var oneJoke = [Joke]()
     
-    func getJokeData(router: Router, completion: @escaping (Result<[Joke], NetworkError>) -> Void) {
+    func getJokeData<T: Decodable>(router: Router, type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
         guard let url = URL(string: router.url) else {
             completion(.failure(.URLError))
@@ -41,7 +41,7 @@ class ApiService {
         
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            if let error = error {
+            if error != nil {
                 completion(.failure(.internetError))
                 return
             }
@@ -54,7 +54,7 @@ class ApiService {
             do {
                 
                 let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([Joke].self, from: data)
+                let jsonData = try decoder.decode(T.self, from: data)
                 
                 DispatchQueue.main.async {
                     completion(.success(jsonData))

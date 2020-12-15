@@ -19,7 +19,8 @@ class JokeTableViewCell: UITableViewCell {
     
     var idString = ""
     
-    func setCellWithValuesOf(_ joke: Joke) {
+    func setCellWithValuesOf(_ joke: Joke?) {
+        guard let joke = joke else { return }
         updateUI(id: joke.id, type: joke.type, setup: joke.setup, joke: joke.joke)
     }
     

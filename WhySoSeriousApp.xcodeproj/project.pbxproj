@@ -11,6 +11,7 @@
 		8957132D2587A986007A3064 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8957132C2587A986007A3064 /* JokeModel.swift */; };
 		895713302587AB9F007A3064 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8957132F2587AB9F007A3064 /* ApiService.swift */; };
 		895713382587CC45007A3064 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895713372587CC45007A3064 /* JokeViewModel.swift */; };
+		897AE76125880D2C003B8DCF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE76025880D2C003B8DCF /* MenuViewModel.swift */; };
 		8990A5D125879ED500CF1F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D025879ED500CF1F90 /* AppDelegate.swift */; };
 		8990A5D325879ED500CF1F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D225879ED500CF1F90 /* SceneDelegate.swift */; };
 		8990A5D525879ED500CF1F90 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5D425879ED500CF1F90 /* JokesViewController.swift */; };
@@ -19,6 +20,7 @@
 		8990A5DD25879EDA00CF1F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */; };
 		8990A5E72587A2D500CF1F90 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5E62587A2D500CF1F90 /* MenuViewController.swift */; };
 		8990A5EA2587A2ED00CF1F90 /* RandomJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */; };
+		89B9C5DF25881E1400D73209 /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9C5DE25881E1400D73209 /* ImageDownloaderService.swift */; };
 		89CFF04C2587FD0400C35CED /* RandomJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CFF04B2587FD0400C35CED /* RandomJokeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,7 @@
 		8957132C2587A986007A3064 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		8957132F2587AB9F007A3064 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		895713372587CC45007A3064 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		897AE76025880D2C003B8DCF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		8990A5CD25879ED500CF1F90 /* WhySoSeriousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhySoSeriousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990A5D025879ED500CF1F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8990A5D225879ED500CF1F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		8990A5DE25879EDA00CF1F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8990A5E62587A2D500CF1F90 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8990A5E92587A2ED00CF1F90 /* RandomJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewController.swift; sourceTree = "<group>"; };
+		89B9C5DE25881E1400D73209 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
 		89CFF04B2587FD0400C35CED /* RandomJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +58,8 @@
 		8957133A2587F1BA007A3064 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				8990A5E62587A2D500CF1F90 /* MenuViewController.swift */,
+				897AE76325880D40003B8DCF /* View */,
+				897AE76525880D46003B8DCF /* ViewModel */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -77,6 +82,68 @@
 			path = Jokes;
 			sourceTree = "<group>";
 		};
+		897AE76325880D40003B8DCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5E62587A2D500CF1F90 /* MenuViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		897AE76525880D46003B8DCF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				897AE76025880D2C003B8DCF /* MenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		897AE76725881739003B8DCF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8957132F2587AB9F007A3064 /* ApiService.swift */,
+				89B9C5DE25881E1400D73209 /* ImageDownloaderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		897AE76825881766003B8DCF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8957133A2587F1BA007A3064 /* Menu */,
+				8957133B2587F202007A3064 /* RandomJoke */,
+				8957133C2587F26B007A3064 /* Jokes */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		897AE76B25881799003B8DCF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5D025879ED500CF1F90 /* AppDelegate.swift */,
+				8990A5D225879ED500CF1F90 /* SceneDelegate.swift */,
+				8990A5DE25879EDA00CF1F90 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		897AE76C258817CF003B8DCF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5D625879ED500CF1F90 /* Main.storyboard */,
+				8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		897AE76D258817E2003B8DCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8990A5D925879EDA00CF1F90 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8990A5C425879ED500CF1F90 = {
 			isa = PBXGroup;
 			children = (
@@ -96,17 +163,12 @@
 		8990A5CF25879ED500CF1F90 /* WhySoSeriousApp */ = {
 			isa = PBXGroup;
 			children = (
-				8990A5D025879ED500CF1F90 /* AppDelegate.swift */,
-				8990A5D225879ED500CF1F90 /* SceneDelegate.swift */,
-				8957132F2587AB9F007A3064 /* ApiService.swift */,
+				897AE76B25881799003B8DCF /* Application */,
+				897AE76725881739003B8DCF /* Services */,
 				89CFF0452587FC0C00C35CED /* Model */,
-				8957133C2587F26B007A3064 /* Jokes */,
-				8957133B2587F202007A3064 /* RandomJoke */,
-				8957133A2587F1BA007A3064 /* Menu */,
-				8990A5D625879ED500CF1F90 /* Main.storyboard */,
-				8990A5D925879EDA00CF1F90 /* Assets.xcassets */,
-				8990A5DB25879EDA00CF1F90 /* LaunchScreen.storyboard */,
-				8990A5DE25879EDA00CF1F90 /* Info.plist */,
+				897AE76C258817CF003B8DCF /* Storyboards */,
+				897AE76825881766003B8DCF /* Screens */,
+				897AE76D258817E2003B8DCF /* Resources */,
 			);
 			path = WhySoSeriousApp;
 			sourceTree = "<group>";
@@ -224,9 +286,11 @@
 			files = (
 				8957132D2587A986007A3064 /* JokeModel.swift in Sources */,
 				895713382587CC45007A3064 /* JokeViewModel.swift in Sources */,
+				89B9C5DF25881E1400D73209 /* ImageDownloaderService.swift in Sources */,
 				8990A5D525879ED500CF1F90 /* JokesViewController.swift in Sources */,
 				8990A5D125879ED500CF1F90 /* AppDelegate.swift in Sources */,
 				895713292587A7B0007A3064 /* JokeTableViewCell.swift in Sources */,
+				897AE76125880D2C003B8DCF /* MenuViewModel.swift in Sources */,
 				8990A5D325879ED500CF1F90 /* SceneDelegate.swift in Sources */,
 				8990A5E72587A2D500CF1F90 /* MenuViewController.swift in Sources */,
 				895713302587AB9F007A3064 /* ApiService.swift in Sources */,
@@ -380,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35VQYXQGSS;
-				INFOPLIST_FILE = WhySoSeriousApp/Info.plist;
+				INFOPLIST_FILE = WhySoSeriousApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35VQYXQGSS;
-				INFOPLIST_FILE = WhySoSeriousApp/Info.plist;
+				INFOPLIST_FILE = WhySoSeriousApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

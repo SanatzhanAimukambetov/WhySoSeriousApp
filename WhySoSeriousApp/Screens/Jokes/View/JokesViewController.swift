@@ -10,7 +10,7 @@ import UIKit
 class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
-    private var viewModel = JokeViewModel()
+    var viewModel: JokeViewModel?
     var idString = ""
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     private func loadData() {
-        viewModel.fetchJokesData { [weak self] in
+        viewModel?.fetchJokesData { [weak self] in
             self?.tableView.reloadData()
         }
     }
@@ -33,13 +33,13 @@ class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRowsInSection(section: section)
+        return viewModel?.numberOfRowsInSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jokeID", for: indexPath) as! JokeTableViewCell
         
-        let joke = viewModel.cellForRowAt(indexPath: indexPath)
+        let joke = viewModel?.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(joke)
         
         return cell
@@ -47,6 +47,12 @@ class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let count = viewModel?.numberOfRowsInSection(), indexPath.row == count - 2 {
+            loadData()
+        }
     }
 
 }
